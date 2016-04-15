@@ -1,0 +1,193 @@
+/**	
+ *	Editor UI CSS
+ *	
+ *
+ *
+ */
+
+ @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+
+ * {
+ 	box-sizing: border-box;
+ 	font-family: 'Roboto Condensed', sans-serif;
+ }
+
+ .container_editor {
+ 	background: #FFF;
+ 	width: 100%;
+ 	height: 100%;
+ 	position: relative;
+ }
+
+ .editor {
+ 	position: absolute;
+ 	top: 10%;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 90%;
+ 	border: 0;
+ 	outline: none;
+ 	max-width: 100%;
+ 	max-height: 90%;
+ 	display: none;
+ 	z-index: 15;
+
+ 	padding: 5px;
+ 	border-top: 1px solid #DDD;
+ 	overflow-y: auto;
+ 	background: #DDD;
+ }
+
+ #editor_visual {
+ 	display: block;
+ }
+ .Page, .Edit, .Insert, .Special {
+ 	width: 100%;
+ 	height: 10%;
+ 	padding: 5px;
+ 	display: none;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	overflow-y: auto;
+ 	background: rgba(180, 180, 180, 56);
+ }
+
+ .Page {
+ 	display: block;
+ }
+
+ .Page > li, .Edit > li, .Insert > li, .Special > li {
+ 	margin: 2px;
+ 	display: inline-block;
+ 	height: 80%;
+ 	margin-top: 5px;
+ 	width: 50px;
+ 	z-index: 10;
+ 	background: transparent;
+ }
+
+ .titles {
+ 	position: absolute;
+ 	top: -50px;
+ 	left: 0px;
+ 	background: rgba(180, 180, 180, 56);
+ 	color: #444;
+ 	width: 100%;
+ 	height: 50px;
+ 	padding: 15px 5px;
+ }
+
+ .titles > a {
+ 	text-decoration: none;
+ 	color: #444;
+ 	padding: 5px 10px;
+ 	cursor: pointer;
+ 	font-size: 18px;
+ }
+
+ .titles > a:visited {
+ 	color: #444;
+ }
+
+ .titles > a.active {
+ 	color: #069;
+ }
+
+ .titles > div {
+ 	float: right;
+ 	margin-right: 10px;
+ }
+
+ .titles .toggle_editor {
+ 	width: 50px;
+ 	height: 20px;
+ 	border-radius: 50px;
+ 	border: 1px solid #CCC;
+ 	position: relative;
+
+ 	-webkit-transition: right 200ms linear;
+ 	transition: right 200ms linear;
+ }
+
+  .titles .toggle_editor.visual {
+  	background: #069;
+  }	
+
+  .titles .toggle_editor.text {
+  	background: #CCC;
+  }	
+
+ .titles .toggle_editor.visual:after {
+ 	content: "";
+ 	display: block;
+ 	position: absolute;
+ 	width: 30px;
+ 	height: 30px;
+ 	background: #969696;
+ 	border-radius: 50%;
+
+ 	top: -5px;
+ 	right: -5px;
+
+ 	-webkit-transition: right 200ms linear;
+ 	transition: right 200ms linear;
+ }
+
+ .titles .toggle_editor.text:after {
+ 	content: "";
+ 	display: block;
+ 	position: absolute;
+ 	width: 30px;
+ 	height: 30px;
+ 	background: #999;
+ 	border-radius: 50%;
+
+ 	top: -5px;
+ 	right: 25px;
+
+ 	-webkit-transition: right 200ms linear;
+ 	transition: right 200ms linear;
+ }
+
+ li {
+ 	display: inline-block;
+ 	list-style: none;
+ }
+
+ .Page > li {
+ 	display: inline-block;
+ 	z-index: 10;
+ }
+
+ .Page i , .Special i, .Edit i, .Insert i {
+ 	border: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	cursor: pointer;
+ 	position: relative;
+ 	background: transparent;
+ 	padding: 10px;
+ 	outline: none;
+ }
+
+ /*
+  *	Custom Webkit Scrollbar
+  */
+
+ ::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+    background: #999;
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #777;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4); 
+}
